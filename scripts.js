@@ -1,16 +1,17 @@
-// Adding an event listener for music
 document.addEventListener("DOMContentLoaded", function() {
     const bgMusic = document.getElementById("bg-music");
+    const playButton = document.getElementById("play-button");
 
-    // Play music when page is loaded
-    bgMusic.play();
+    // Attempt to unmute and play audio on load
+    bgMusic.muted = false;
+    bgMusic.play().catch(error => {
+        console.log("Autoplay blocked: ", error);
+        playButton.style.display = "block"; // Show the play button if autoplay is blocked
+    });
 
-    // Function to toggle music on/off when clicked
-    bgMusic.addEventListener("click", function() {
-        if (bgMusic.paused) {
-            bgMusic.play();
-        } else {
-            bgMusic.pause();
-        }
+    // Play music when the "Play Music" button is clicked (fallback)
+    playButton.addEventListener("click", function() {
+        bgMusic.play();
+        playButton.style.display = "none"; // Hide the button once music is playing
     });
 });

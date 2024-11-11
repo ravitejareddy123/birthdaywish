@@ -1,4 +1,4 @@
-/* Apply a beautiful gradient background */
+/* Main body styling */
 body {
     margin: 0;
     padding: 0;
@@ -10,6 +10,46 @@ body {
     background: linear-gradient(to right, #ff7e5f, #feb47b);
     color: white;
     overflow: hidden;
+    position: relative;
+}
+
+/* Sparkling lights effect */
+.sparkling-lights {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.sparkling-lights::before, .sparkling-lights::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.6), transparent);
+    animation: sparkle 5s linear infinite;
+}
+
+.sparkling-lights::after {
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3), transparent);
+    animation: sparkle 7s linear infinite reverse;
+}
+
+@keyframes sparkle {
+    0% {
+        transform: translate3d(-20%, -20%, 0) scale(1);
+    }
+    50% {
+        transform: translate3d(10%, 10%, 0) scale(1.1);
+    }
+    100% {
+        transform: translate3d(-20%, -20%, 0) scale(1);
+    }
 }
 
 /* Container styling */
@@ -19,6 +59,8 @@ body {
     background: rgba(0, 0, 0, 0.5); /* Add transparency to focus on text */
     border-radius: 15px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    position: relative;
 }
 
 /* Header & Message Styling */

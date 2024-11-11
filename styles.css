@@ -1,95 +1,62 @@
-/* General Reset */
-* {
+/* Apply a beautiful gradient background */
+body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    font-family: 'Dancing Script', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    color: white;
+    overflow: hidden;
 }
 
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f1f1f1;
-    color: #333;
-    text-align: center;
-}
-
+/* Container styling */
 .container {
-    width: 90%;
-    max-width: 800px;
-    margin: 50px auto;
+    text-align: center;
     padding: 20px;
-    background-color: #fff;
+    background: rgba(0, 0, 0, 0.5); /* Add transparency to focus on text */
     border-radius: 15px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
-/* Header with the birthday greeting */
+/* Header & Message Styling */
 header h1 {
     font-family: 'Pacifico', cursive;
-    font-size: 3.5rem;
-    color: #f56c42;
+    font-size: 2.5em;
     margin-bottom: 20px;
-    animation: fadeIn 2s ease-in-out;
 }
 
 .message p {
-    font-family: 'Dancing Script', cursive;
-    font-size: 1.5rem;
-    color: #555;
-    margin-bottom: 20px;
-    opacity: 0;
-    animation: fadeIn 2s ease-in-out forwards;
+    font-size: 1.5em;
+    margin: 10px 0;
 }
 
-footer p {
-    font-family: 'Dancing Script', cursive;
-    font-size: 1.5rem;
-    color: #777;
-    margin-top: 30px;
-    opacity: 0;
-    animation: fadeIn 2s ease-in-out forwards;
-}
-
+/* Image Styling */
 .image img {
-    width: 100%;
-    max-width: 400px;
-    border-radius: 10px;
+    width: 250px;
+    margin-top: 20px;
     animation: bounce 2s infinite;
 }
 
-/* Fade-in effect */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+/* Footer Styling */
+footer p {
+    font-size: 1.2em;
+    margin-top: 30px;
 }
 
-/* Bounce animation for the cake image */
+/* Animations */
 @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0);
-    }
-    40% {
-        transform: translateY(-15px);
-    }
-    60% {
-        transform: translateY(-10px);
-    }
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
 }
 
-/* Add a background color to the footer */
-footer {
-    background-color: #f8f8f8;
-    padding: 15px 0;
+.fade-in {
+    animation: fadeIn 2s ease-in;
 }
 
-/* Style for the music player */
-audio {
-    margin-top: 20px;
-    width: 100%;
-    max-width: 300px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }

@@ -46,6 +46,18 @@ footer p {
     margin-top: 30px;
 }
 
+/* Play Button Styling */
+#play-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    background-color: #ffcc00;
+    border: none;
+    border-radius: 5px;
+    color: #333;
+}
+
 /* Animations */
 @keyframes bounce {
     0%, 100% { transform: translateY(0); }

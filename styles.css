@@ -13,43 +13,33 @@ body {
     position: relative;
 }
 
-/* Sparkling lights effect */
+/* Sparkling lights effect on both sides */
 .sparkling-lights {
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
+    width: 20%;
     height: 100%;
-    overflow: hidden;
     pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
 }
 
-.sparkling-lights::before, .sparkling-lights::after {
-    content: '';
-    position: absolute;
-    top: 0;
+.sparkling-lights.left {
     left: 0;
-    width: 300%;
-    height: 300%;
     background: radial-gradient(circle, rgba(255, 255, 255, 0.6), transparent);
     animation: sparkle 5s linear infinite;
 }
 
-.sparkling-lights::after {
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.3), transparent);
-    animation: sparkle 7s linear infinite reverse;
+.sparkling-lights.right {
+    right: 0;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.6), transparent);
+    animation: sparkle 5s linear infinite reverse;
 }
 
 @keyframes sparkle {
-    0% {
-        transform: translate3d(-20%, -20%, 0) scale(1);
-    }
-    50% {
-        transform: translate3d(10%, 10%, 0) scale(1.1);
-    }
-    100% {
-        transform: translate3d(-20%, -20%, 0) scale(1);
-    }
+    0% { transform: translateY(0); opacity: 0.5; }
+    50% { transform: translateY(-20px); opacity: 1; }
+    100% { transform: translateY(0); opacity: 0.5; }
 }
 
 /* Container styling */

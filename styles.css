@@ -7,7 +7,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: url('sparkling.jpeg') no-repeat center center fixed; /* Background image */
+    background: url('sparkling.jpg') no-repeat center center fixed; /* Background image */
     background-size: cover; /* Ensure the background image covers the whole screen */
     color: white;
     overflow: hidden;

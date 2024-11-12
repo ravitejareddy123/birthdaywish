@@ -7,7 +7,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: url('../sparkling.jpg') no-repeat center center fixed; /* Background image */
+    background: url('https://media.istockphoto.com/id/1407153389/vector/magic-night-dark-blue-frame-with-sparkling-glitter-bokeh-and-light-art.jpg?s=612x612&w=0&k=20&c=AZZ0lcRZZNouMTi_MbEA8OrHMl5fJ2OZggN9qmBGTkE=') no-repeat center center fixed; /* Background image */
     background-size: cover; /* Ensure the background image covers the whole screen */
     color: white;
     overflow: hidden;

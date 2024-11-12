@@ -1,4 +1,4 @@
-/* Main body styling */
+/* Main body styling with sparkling background */
 body {
     margin: 0;
     padding: 0;
@@ -7,7 +7,8 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    background: url('sparkling.jpeg') no-repeat center center fixed; /* Background image */
+    background-size: cover; /* Ensure the background image covers the whole screen */
     color: white;
     overflow: hidden;
     position: relative;

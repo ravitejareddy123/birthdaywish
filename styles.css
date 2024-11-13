@@ -7,9 +7,6 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    /*background-image: 'sparkling.jpg';
-    /*background: url('https://media.istockphoto.com/id/1407153389/vector/magic-night-dark-blue-frame-with-sparkling-glitter-bokeh-and-light-art.jpg?s=612x612&w=0&k=20&c=AZZ0lcRZZNouMTi_MbEA8OrHMl5fJ2OZggN9qmBGTkE=') no-repeat center center fixed; /* Background image */
-    background-size: cover; /* Ensure the background image covers the whole screen */
     color: white;
     overflow: hidden;
     position: relative;
@@ -62,16 +59,27 @@ header h1 {
     margin-bottom: 20px;
 }
 
+/* Applying the bounce animation to the message */
 .message p {
     font-size: 1.5em;
     margin: 10px 0;
+    animation: bounce 2s infinite; /* Adding bounce animation to message */
 }
 
-/* Image Styling */
+/* Display images side by side */
+.flex-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between images */
+}
+
 .image img {
-    width: 250px;
+    width: 250px;  /* Set a fixed width for uniform size */
+    height: 250px; /* Set a fixed height for uniform size */
+    object-fit: cover; /* Ensures the images fill the specified dimensions without distortion */
     margin-top: 20px;
     animation: bounce 2s infinite;
+    border-radius: 8px; /* Optional: add rounded corners */
 }
 
 /* Footer Styling */
@@ -92,7 +100,7 @@ footer p {
     color: #333;
 }
 
-/* Animations */
+/* Bounce animation */
 @keyframes bounce {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-15px); }
